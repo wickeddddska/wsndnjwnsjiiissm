@@ -234,7 +234,7 @@ const galeriaFull = document.getElementById("galeria-full");
 {titulo: "Velma - Scooby Doo", texto: "Tu havia citado isso quando a gente começou a se falar, dai so levei isso pra mente como verdade", imagem: "img/velma.jpeg" },
 {titulo: "Ashley Graves", texto: "Tu ja deve saber o porque", imagem: "img/ashley.jpeg" },
 {titulo: "Mimosa - Black Clover", texto: "Mesmo sabendo que tu vai me dar uma facada, sei que debaixo dessa insanidade deliciosa tu é toda fofinha e carinhosa, principalemnet quando assopra na cara de alguém. Alem disso, o cabelo de vocês duas parece um poco", imagem: "img/mimosa.jpeg" },
-{titulo: "Anibella - Otherworld Legends", texto: "Other world é o jogo que mais joguei na minha vida, mas um dos herois que tem nele,é ela, além de ambas serem fofinhas, tem o gatinho dela que lembra teu amor por gatos e é toda misteriosa e cheia de segredos, alem de ser incrivelmente linda", imagem: "img/anibella.jpeg" },
+{titulo: "Anibella - Otherworld Legends", texto: "Other world é o jogo que mais joguei na minha vida, mas um dos herois que tem nele,é ela, além de ambas serem fofinhas, tem o gatinho dela que lembra teu amor por gatos e é toda misteriosa e cheia de segredos, alem de ser incrivelmente linda", imagem: "img/Anibella.jpeg" },
 {titulo:"Rosas Azuis", texto:"Tu ja sabe o porque", imagem:"img/azul.jpeg"},
 {titulo:"Girlfriend - Friday Night Funkin'", texto:"Alem de ser charmosa igual tu, ela tem esse vestido vermelho que parece com o teu que me arrepenta por completo", imagem:"img/Girlfriend.jpeg"}
      ];
@@ -282,6 +282,7 @@ const btnNext = document.querySelector('.next');
 
 if (btnPrev) btnPrev.addEventListener('click', () => mostrarSlide(currentSlide - 1));
 if (btnNext) btnNext.addEventListener('click', () => mostrarSlide(currentSlide + 1));
+
 
 
 
