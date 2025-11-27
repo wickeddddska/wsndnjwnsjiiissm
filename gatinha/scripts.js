@@ -83,8 +83,8 @@ btnContinuar.addEventListener("click", () => {
 
 // ---------- SISTEMA DE ELEMENTOS LIMITADOS ----------
 const ativos = [];
-const LIMITE = 100;
-const DURACAO = 15000;
+const LIMITE = 50;
+const DURACAO = 10000;
 
 function adicionarElemento(el) {
   sky.appendChild(el);
@@ -282,4 +282,5 @@ const btnNext = document.querySelector('.next');
 
 if (btnPrev) btnPrev.addEventListener('click', () => mostrarSlide(currentSlide - 1));
 if (btnNext) btnNext.addEventListener('click', () => mostrarSlide(currentSlide + 1));
+
 
