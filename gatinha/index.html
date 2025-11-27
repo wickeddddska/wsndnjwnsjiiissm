@@ -1,0 +1,232 @@
+
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>By Theuzyn</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<!-- Fonte redondinha global -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+
+  
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    /* Fundo estrelado */
+    .sky {
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Tabs */
+    .tab-btn { cursor: pointer; padding: 10px 15px; background: #333; color: #fff; border: none; margin-right: 5px; border-radius: 5px; }
+    .tab-btn.active { background: #ff69b4; }
+
+    .tab-panel { padding: 20px; }
+    .hidden { display: none; }
+
+    /* Cartinhas estilizadas */
+    .carta-item {
+      background-color: #ffb6d5;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      color: #fff;
+      line-height: 1.5;
+      transition: transform 0.2s ease;
+      max-width: 600px;
+      word-wrap: break-word;
+    }
+
+    .carta-item:hover {
+      transform: scale(1.03);
+    }
+
+    /* Botões e cards centrais */
+    .btn { cursor: pointer; padding: 8px 12px; border: none; border-radius: 8px; background-color: #ff69b4; color: #fff; margin: 5px; }
+    .btn-primary { background-color: #ff1493; }
+
+    .center-card { text-align: center; margin: 20px 0; }
+    .interaction-buttons button { margin: 5px; }
+
+    /* Formulários */
+    .form-crud label { display: block; margin-bottom: 10px; }
+    .form-crud input, .form-crud textarea, .form-crud select { width: 100%; padding: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    .form-actions { margin-top: 10px; }
+  </style>
+
+  <!-- Meta description -->
+  <meta name="description" content="Site romântico com galeria, cartinhas e interações - front-end only.">
+</head>
+<body>
+  <!-- App wrapper -->
+  <div id="app" class="app">
+
+    <!-- Fundo estrelado / cenário -->
+    <div id="sky" class="sky" aria-hidden="true"></div>
+
+    <!-- Top navigation: abas -->
+    <header class="topbar" role="banner">
+      <div class="brand">
+          </div>
+
+      <!-- Tabs -->
+      <nav class="tabs" role="navigation" aria-label="Navegação principal">
+        <button class="tab-btn active" data-tab="home" aria-label="Home">Home</button>
+        <button class="tab-btn" data-tab="musica" aria-label="Musicas">Musicas</button>
+        <button class="tab-btn" data-tab="coisas" aria-label="Coisas que me lembram tu">Coisas</button>
+
+      </nav>
+    </header>
+
+
+    <!-- Main content -->
+    <main id="main" class="main" role="main">
+
+      <!-- Home / Saudação -->
+      <section id="tab-home" class="tab-panel active" aria-labelledby="home">
+        <!-- Saudações tipo typewriter -->
+        <div id="app-saudacao" class="saudacao" role="region" aria-live="polite">
+          <div class="dialog-card" id="dialog-card">
+            <p id="typing-text" class="typing" aria-atomic="true"></p>
+            <div class="dialog-actions">
+              <button id="btn-continuar" class="btn btn-primary" aria-label="Continuar">Continuar</button>
+            </div>
+          </div>
+        </div>
+
+<!-- Interruptor para chuva de palavrinhas -->
+<label class="switch">
+  <input type="checkbox" id="btn-chuva">
+  <span class="slider">
+    <br>
+    <br>    
+    Ativar chuva</span>
+</label>
+
+<!-- Card central com pergunta - Cabelo -->
+<section class="center-card" aria-label="Interações principais">
+  <div class="center-inner">
+    <div class="interaction-buttons">
+      <button class="btn-interacao" id="btn-cabelo" aria-label="O que eu acho do seu cabelo?">
+        O que eu acho do seu cabelo?
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Card central com pergunta - Sorriso -->
+<section class="center-card" aria-label="Interações principais">
+  <div class="center-inner">
+    <div class="interaction-buttons">
+      <button class="btn-interacao" id="btn-sorriso" aria-label="O que eu acho do seu sorriso">
+        Seu sorriso
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Card central com pergunta - Corpo -->
+<section class="center-card" aria-label="Interações principais">
+  <div class="center-inner">
+    <div class="interaction-buttons">
+      <button class="btn-interacao" id="btn-corpo" aria-label="O que eu acho do seu corpo?">
+        E do seu corpo?
+      </button>
+    </div>
+  </div>
+</section>
+      </section>
+
+      <section id="tab-musica" class="tab-panel hidden">
+        <div class="full-header">
+          <h2>Músicas que lembram tu</h2>
+        </div>
+        <div id="musica-lista" class="musica-lista">
+          <ul>
+            <li>
+              <a href="https://youtu.be/Lom5p8K_OB0?si=o1Efrq_ohs2KlSpz">Bundinha de Tanajura</a>  <br>
+                  <p>Tava voltando do curso em um dia qualquer, dai um senhor tava bebendo na porta da casa dele ouvindo essa musica, so consegui lembrar de ti e começei a rir.</p>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="https://youtu.be/Lom5p8K_OB0?si=o1Efrq_ohs2KlSpz">Lana Del Rey - Ultraviolence</a>  <br>
+                  <p>Nem preciso falar muito pq...</p>
+            </li>
+          </ul>
+
+            <ul>
+            <li>
+              <a href="https://youtu.be/mMfxI3r_LyA?si=SG5B7CwrvYLj0am2">Lady (Hear Me Tonight)</a>  <br>
+                  <p>Alem do ritmo ser legalzinho, a letra fala sobre "um amor recém descoberto", e sei la, foi algo tão repentino que é uma explosão de sentimentos sabe?</p>
+            </li>
+          </ul>
+        </div>
+
+         <ul>
+            <li>
+              <a href="https://youtu.be/VqzVyWwKx8U?si=G-H-tEPA--TqjrET">Daydream in blue</a>  <br>
+                <p> Eu escuto ela faz bastante tempo,a letra fala sobre um sonho...tu sabe qual tipo de sonho e levando em conta a experiencia que eu tive, dai acabei realacinando tu e ela </p>
+            </li>
+          </ul>
+        </div>
+
+      </section>                                                    
+
+       <!-- Coisas que me lembram tu -->
+<section id="tab-coisas" class="tab-panel hidden">   
+  
+      <div class="full-header">
+          <h2>Coicas que lembram tu</h2>
+        </div>
+
+  <div class="carousel">
+    <button class="prev">⟵</button>
+
+    <!-- ESTE É O QUE O JS PRECISA PARA FUNCIONAR -->
+    <div id="galeria-full" class="slides"></div>
+
+    <button class="next">⟶</button>
+  </div>
+
+</section>
+
+
+
+    <!-- Modal geral -->
+    <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+      <div class="modal-content" role="document">
+        <button id="modal-close" class="modal-close" aria-label="Fechar modal">✕</button>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <!-- Scripts (SEM defer) -->
+  <script src="scripts.js"></script>
+</body>
+</html>
