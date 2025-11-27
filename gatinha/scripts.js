@@ -228,7 +228,7 @@ const galeriaFull = document.getElementById("galeria-full");
 // ---------- ITENS INICIAIS ----------
  const coisasIniciais = [
     
-  { titulo: "Jane Doe - Zenless Zone Zero", texto: "Quan dei uma olhada na personagem, a primeira coisa q veio na cabeça foi tu,ja que vcs são poucas ideias e corajosas, mas tem os moementos de frajilidade.Em aparecia, abas tem o cabelo preto, com o peteado um pouco parecido ainda por cima perigosamente atreantes", imagem: "img/jd.jpeg" },
+  { titulo: "Jane Doe - Zenless Zone Zero", texto: "Quando dei uma olhada na personagem, a primeira coisa q veio na cabeça foi tu,ja que vcs são poucas ideias e corajosas, mas tem os momentos de frajilidade.Em aparecia, abas tem o cabelo preto, com o peteado um pouco parecido ainda por cima perigosamente atreantes", imagem: "img/jd.jpeg" },
   {titulo: "Kuromi", texto: "Sim, eu sei que tu gosta mais da Hello Kitty, mas, acho que a tua personalidade bate mais com ela " , imagem: "img/kuromi.jpeg" },
   {titulo: "Ahri - League of Legends", texto: "Vcs duas tem um vabelo lindo pra caraca,além de ter aquele olhar que quebra qualquer um facil facil", imagem: "img/ahri.jpeg" },
 {titulo: "Velma - Scooby Doo", texto: "Tu havia citado isso quando a gente começou a se falar, dai so levei isso pra mente como verdade", imagem: "img/velma.jpeg" },
@@ -282,3 +282,4 @@ const btnNext = document.querySelector('.next');
 
 if (btnPrev) btnPrev.addEventListener('click', () => mostrarSlide(currentSlide - 1));
 if (btnNext) btnNext.addEventListener('click', () => mostrarSlide(currentSlide + 1));
+
